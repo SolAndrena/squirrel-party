@@ -13,39 +13,51 @@
 
         img {
             width: 300px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
         }
 
         #message {
             margin-top: 20px;
             font-size: 24px;
             font-weight: bold;
+            color: darkgreen;
         }
     </style>
 </head>
+
 <body>
 
-<h1>My First Telegram Mini App Prototype</h1>
+    <h1>My First Telegram Mini App Prototype</h1>
 
-<button id="img_click">Dare to Click?</button>
+    <button id="img_click">Dare to Click?</button>
 
-<br><br>
+    <br><br>
 
-<img src="bg.jpg" alt="Picture">
+    <img src="bg.jpg" alt="Picture" id="myImage">
 
-<br><br>
+    <br><br>
 
-<div id="message"></div>
+    <div id="message"></div>
 
-<script>
+    <script>
 
-document.getElementById("img_click")
-.addEventListener("click", function () {
+        function showMessage() {
+            document.getElementById("message").innerText =
+                "And I just say.... Hello";
+        }
 
-    document.getElementById("message").innerText = "And I just say.... Hello";
+        document.getElementById("img_click")
+            .addEventListener("click", showMessage);
 
-});
+        document.getElementById("myImage")
+            .addEventListener("click", showMessage);
 
-</script>
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My First Telegram Mini App</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        img {
+            width: 300px;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My First Telegram Mini App Prototype</h1>
+
+<button id="img_click">Click the picture</button>
+
+<br><br>
+
+<img src="bg.jpg" alt="Picture">
+
+<br><br>
+
+<div id="message"></div>
+
+<script>
+
+document.getElementById("img_click")
+.addEventListener("click", function () {
+
+    document.getElementById("message").innerText = "Hello";
+
+});
+
+</script>
+
+</body>
+</html>
